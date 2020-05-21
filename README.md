@@ -60,5 +60,6 @@ module.exports = {
 
 ## preview
 
-<p align="center"><img src="./docs/blog-home.png" style="width: 80%"/></p>
-<p align="center" style="margin-top: 32px"><img src="./docs/blog-example.png" style="width: 80%"/></p>
+<p align="center"><img src="./docs/blog-home.png" width="600" /></p>
+
+<p align="center"><img src="./docs/blog-example.png" width="600"/></p>
