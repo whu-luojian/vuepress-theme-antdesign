@@ -1,0 +1,94 @@
+@import './config';
+@import './wrapper.less';
+
+.@{contentClass}:not(.custom) {
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  line-height: 2;
+
+  & {
+    @media (max-width: @MQNarrow) {
+      padding-bottom: 2em;
+    }
+    .wrapper;
+  }
+  p.demo {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: rgba(0,0,0,.85);
+    font-weight: 500;
+    font-family: Avenir,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji,sans-serif;
+
+    // # 链接
+    a.header-anchor {
+      margin-left: 8px;
+      opacity: 0;
+      transition: opacity .3s;
+    
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:hover .header-anchor {
+      opacity: 1;
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin: 1.6em 0 .6em;
+  }
+
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  img {
+    max-width: calc(100% - 32px);
+  }
+
+  p > img {
+    margin: 34px 0;
+    -webkit-box-shadow: 0 8px 20px rgba(143,168,191,.35);
+    box-shadow: 0 8px 20px rgba(143,168,191,.35);
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  ul>li, ol>li {
+    margin-left: 20px;
+    padding-left: 4px;
+    list-style-type: decimal;
+  }
+
+  blockquote {
+    font-size: 90%;
+    color: #666;
+    border-left: 0.2rem solid #cbcbcb;
+    margin: 1rem 0;
+    padding: 0.25rem 1rem;
+    background-color: #f8f8f8;
+  
+    & > p {
+      margin: .625rem 0;
+    }
+  }
+}

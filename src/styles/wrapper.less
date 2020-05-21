@@ -1,0 +1,15 @@
+.wrapper() {
+  max-width: @contentWidth;
+  margin: 0 auto;
+  padding: 0 170px 32px 64px;
+
+  @media (max-width: @MQNarrow) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @media (max-width: @MQMobileNarrow) {
+    padding: 1.6rem;
+    padding-top: 0;
+  }
+}

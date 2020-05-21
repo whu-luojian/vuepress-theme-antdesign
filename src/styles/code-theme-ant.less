@@ -1,0 +1,94 @@
+pre {
+  border-radius: 2px;
+  margin: 16px 0;
+  padding: 12px 20px;
+  overflow: auto;
+  background-color: @codeBgColor; // 代码块背景色
+}
+
+code {
+  margin: 0 1px;
+  padding: .2em .4em;
+  font-size: .9em;
+  background: #f2f4f5; // 单行代码背景色
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+}
+
+a code {
+  padding: 0.2em;
+  background: initial; // 单行代码背景色
+  border: none;
+}
+
+pre code {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  color: rgba(0,0,0,.85);
+  background-color: @codeBgColor; // 代码块背景色
+  font-size: 13px;
+  direction: ltr;
+  text-align: left;
+  border: none;
+  font-family: lucida console,Consolas,Monaco,andale mono,ubuntu mono,monospace;
+  line-height: 2;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+
+.token.atrule, .token.attr-value, .token.keyword, .token.regex {
+  color: #008dff;
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #0b8235;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: #0b8235;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.token.property, .token.tag, .token.boolean, .token.class-name, .token.number, .token.constant, .token.symbol, .token.deleted {
+  color: #f81d22;
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #0b8235;
+}
+
+.token.atrule, .token.attr-value, .token.keyword {
+  color: #008dff;
+}
+
+.token.function {
+  color: #f81d22;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}

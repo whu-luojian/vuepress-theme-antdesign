@@ -1,0 +1,55 @@
+@import './config';
+
+// narrow desktop / iPad
+@media (max-width: @MQNarrow) {
+  .table-of-contents-default {
+    display: none;
+  }
+}
+
+// wide mobile
+@media (max-width: @MQMobile) {
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-sidebar {
+    .sidebar {
+      display: block;
+    }
+  }
+
+  .page {
+    padding-left: 0;
+  }
+
+  .table-of-contents-default {
+    display: none;
+  }
+
+  
+  .theme-container {
+    &.no-navbar {
+      .sidebar {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+// narrow mobile
+@media (max-width: @MQMobileNarrow) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .@{contentClass} {
+    div[class*='language-'] {
+      border-radius: 2px;
+    }
+  }
+
+  .table-of-contents-default {
+    display: none;
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "vuepress-theme-antdesign",
+  "version": "1.0.0",
+  "description": "An Ant Design style theme for VuePress.",
+  "main": "src/index.js",
+  "scripts": {
+    "changelog": "conventional-changelog -p custom-config-2 -i CHANGELOG.md -s -r 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "theme",
+    "vuepress",
+    "vuepress-theme",
+    "antd",
+    "ant-design"
+  ],
+  "author": "whu-luojian",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whu-luojian/vuepress-theme-antdesign.git"
+  },
+  "homepage": "https://github.com/whu-luojian/vuepress-theme-antdesign",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "conventional-changelog-cli": "^2.0.31",
+    "conventional-changelog-custom-config-2": "^0.4.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "changelog": {
+    "authorName": true,
+    "emojis": true,
+    "commitTypes": [
+      "feat",
+      "fix"
+    ]
+  },
+  "dependencies": {
+    "@vuepress/plugin-active-header-links": "^1.5.0",
+    "@vuepress/plugin-nprogress": "^1.5.0",
+    "ant-design-vue": "^1.6.0",
+    "less": "^3.11.1",
+    "less-loader": "^6.1.0",
+    "lodash": "^4.17.15",
+    "vuepress-plugin-container": "^2.1.4",
+    "vuepress-plugin-smooth-scroll": "^0.0.9",
+    "vuex": "^3.4.0"
+  }
+}

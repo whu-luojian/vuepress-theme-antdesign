@@ -1,0 +1,58 @@
+@import './palette.less';
+
+.table-of-contents {
+  .badge {
+    vertical-align: middle;
+  }
+}
+
+.table-of-contents-default {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  .badge {
+    vertical-align: middle;
+  }
+  ul {
+    margin: 16px 0;
+    padding-left: 0;
+    font-size: 12px;
+    list-style: none;
+    border-left: 1px solid #f0f0f0;
+  }
+
+  ul>li {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    line-height: 1.5;
+    list-style: none !important;
+    ul {
+      padding-left: 8px;
+      margin: 4px 0;
+      border-left: none;
+    }
+  }
+
+  ul>li:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  a {
+    display: block;
+    width: 110px;
+    margin-left: -1px;
+    padding-left: 16px;
+    overflow: hidden;
+    color: rgba(0,0,0,.85);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-left: 1px solid transparent;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+  .toc a.current {
+    color: @accentColor;
+    border-color: @accentColor;
+  }
+}
