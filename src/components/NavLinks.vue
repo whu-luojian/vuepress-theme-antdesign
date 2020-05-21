@@ -190,7 +190,7 @@ export default {
     position: absolute;
     right: 1.7rem;
     top: 0;
-    line-height: 64px;
+    line-height: @navbarHeight;
 
     &:hover {
       color: @accentColor;

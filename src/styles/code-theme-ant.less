@@ -11,7 +11,7 @@ code {
   padding: .2em .4em;
   font-size: .9em;
   background: #f2f4f5; // 单行代码背景色
-  border: 1px solid #f0f0f0;
+  border: 1px solid @borderColor;
   border-radius: 3px;
 }
 
@@ -26,7 +26,7 @@ pre code {
   margin: 0;
   padding: 0;
   overflow: auto;
-  color: rgba(0,0,0,.85);
+  color: @textColor;
   background-color: @codeBgColor; // 代码块背景色
   font-size: 13px;
   direction: ltr;

@@ -28,9 +28,4 @@ export default {
   word-break: break-all;
   overflow-x: auto;
 }
-@media (max-width: @MQMobile) {
-  .page {
-    margin-top: -@navbarHeight;
-  }
-}
 </style>

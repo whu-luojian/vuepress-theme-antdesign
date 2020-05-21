@@ -2,7 +2,7 @@
 @import './wrapper.less';
 
 .@{contentClass}:not(.custom) {
-  color: rgba(0,0,0,.85);
+  color: @textColor;
   font-size: 14px;
   line-height: 2;
 
@@ -19,7 +19,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: rgba(0,0,0,.85);
+    color: @textColor;
     font-weight: 500;
     font-family: Avenir,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji,sans-serif;
 

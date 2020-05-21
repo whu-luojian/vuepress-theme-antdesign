@@ -7,8 +7,8 @@ html,body {
   -moz-osx-font-smoothing: grayscale; 
 }
 body{
-  font-size: @bodyFontSize;
-  color: @bodyTextColor;
+  font-size: 14px;
+  color: @textColor;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -112,7 +112,7 @@ th, td {
 #nav.ant-menu-horizontal {
   > .ant-menu-item,
   > .ant-menu-submenu {
-    height: 64px;
+    height: @navbarHeight;
     line-height: 60px;
     min-width: 72px;
     border-top: 2px solid transparent;

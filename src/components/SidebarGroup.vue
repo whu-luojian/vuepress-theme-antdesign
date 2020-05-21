@@ -107,7 +107,7 @@ export default {
 .sidebar-heading {
   display: flex;
   align-items: center;
-  color: rgba(0,0,0,.85);
+  color: @textColor;
   font-weight: bold;
   transition: color 0.15s ease;
   cursor: pointer;

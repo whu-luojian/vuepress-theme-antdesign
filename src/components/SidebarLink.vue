@@ -120,7 +120,7 @@ a.sidebar-link {
   font-size: .875rem;
   font-weight: 400;
   display: inline-block;
-  color: rgba(0,0,0,.85);
+  color: @textColor;
   padding: 0.4rem 1.5rem 0.4rem 2.5rem;
   line-height: 1.4;
   width: 100%;
