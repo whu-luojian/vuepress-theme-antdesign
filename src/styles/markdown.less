@@ -78,6 +78,14 @@
     padding-left: 4px;
   }
 
+  // 消除代码块的全局样式污染
+  .@{codeBoxClass} {
+    ul>li, ol>li {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
   ul>li {
     list-style-type: disc;
     ul>li {
@@ -100,5 +108,27 @@
     & > p {
       margin: .625rem 0;
     }
+  }
+}
+
+.@{mdTableClass} {
+  table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    display: block;
+    overflow-x: auto;
+  }
+
+  tr {
+    border-top: 1px solid #dfe2e5;
+
+    &:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+  }
+
+  th, td {
+    border: 1px solid #dfe2e5;
+    padding: 0.6em 1em;
   }
 }

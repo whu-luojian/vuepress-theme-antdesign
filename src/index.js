@@ -25,30 +25,55 @@ module.exports = (options, ctx) => {
   const enableSmoothScroll = isEmpty(themeConfig.smoothScroll) || true
 
   return {
-    chainWebpack: config=> {
-      config.module
-        .rule('less')
-        .oneOf('normal')
+    chainWebpack: config => {
+      const baseRule = config.module.rule('less');
+      const normal = baseRule.oneOf('normal');
+      const modules = baseRule.oneOf('modules');
+
+      normal
         .use('less-loader')
-        .options({ lessOptions: {
-          javascriptEnabled: true
-        } })
-        .end()
-        .end()
-        .oneOf('modules')
+        .options({
+          lessOptions: {
+            javascriptEnabled: true,
+          },
+        });
+      
+      normal
+        .use('sass-resources-loader')
+        .loader('sass-resources-loader')
+        .options({
+          resources: [
+            path.resolve(sourceDir, '../styles/*.less'),
+          ],
+        });
+
+      modules
         .use('less-loader')
-        .options({ lessOptions: {
-          javascriptEnabled: true
-        } })
+        .options({
+          lessOptions: {
+            javascriptEnabled: true,
+          },
+        });
+
+      modules
+        .use('sass-resources-loader')
+        .loader('sass-resources-loader')
+        .options({
+          resources: [
+            path.resolve(sourceDir, '../styles/*.less'),
+          ],
+        });
     },
     alias () {
       return {
-        '@docs': `${sourceDir}${sep}.vuepress${sep}styles`
+        '@docs': `${sourceDir}${sep}.vuepress${sep}styles`,
+        '@@': path.resolve(sourceDir, '..'),
       }
     },
     plugins: [
-      ['@vuepress/plugin-active-header-links'],
-      ['@vuepress/plugin-nprogress'],
+      '@vuepress/back-to-top',
+      '@vuepress/plugin-active-header-links',
+      '@vuepress/plugin-nprogress',
       ['container', {
         type: 'tip',
         defaultTitle: {
@@ -74,6 +99,10 @@ module.exports = (options, ctx) => {
         type: 'details',
         before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
         after: () => '</details>\n'
+      }],
+      ['container', {
+        type: 'md-table',
+        defaultTitle: '',
       }],
       ['smooth-scroll', enableSmoothScroll]
     ]

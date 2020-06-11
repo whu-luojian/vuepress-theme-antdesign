@@ -30,11 +30,6 @@
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^4.2.5"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "changelog": {
     "authorName": true,
     "emojis": true,
@@ -44,12 +39,14 @@
     ]
   },
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.0",
     "@vuepress/plugin-active-header-links": "^1.5.0",
     "@vuepress/plugin-nprogress": "^1.5.0",
     "ant-design-vue": "^1.6.0",
     "core-js": "^2.6.11",
     "less": "^3.11.1",
     "less-loader": "^6.1.0",
+    "sass-resources-loader": "^2.0.3",
     "lodash": "^4.17.15",
     "vuepress-plugin-container": "^2.1.4",
     "vuepress-plugin-smooth-scroll": "^0.0.9",
